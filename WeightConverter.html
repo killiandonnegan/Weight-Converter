@@ -1,0 +1,77 @@
+<html>
+    <style>
+        .header
+        {
+            text-align: center;
+            padding: 30px;
+            background-color:cadetblue;
+            font-size: 30px;
+            color: white;
+        }
+
+        p
+        {
+            text-align: center;
+        }
+    </style>
+
+    <head>
+        <div class="header">
+            <h1>Weight conversion</h1>
+        </div>
+    </head>
+
+    <body>
+        <a href="https://pixy.org" style="text-align: center">
+            <img alt="Weights" src = "https://pixy.org/src/422/thumbs350/4224643.jpg" width="400" height="400" style="margin:0 40%">
+        </a>
+        
+        <p>
+            <label>Pounds</label>
+            <input id="poundsInput" type="number" placeholder="Pounds" oninput="ConvertToKilograms(this.value)" onchange="ConvertToKilograms(this.value)">
+        </p>
+
+        <p>
+            <label>Kilograms</label>
+            <input id="kilogramsInput" type="number" placeholder="Kilograms" oninput="ConvertToPounds(this.value)" onchange="ConvertToPounds(this.value)">
+        </p>
+
+        <p>
+            <a href="https://github.com/killiandonnegan">Github</a>
+        </p>
+
+        <p>
+            <a href="https://www.linkedin.com/in/killian-donnegan-349381222/">LinkedIn</a>
+        </p>
+        
+
+        <script>
+            function ConvertToKilograms(x)
+            {
+                if(!x)
+                {
+                    document.getElementById("kilogramsInput").value=null;
+                }
+
+                if(x>0)
+                {
+                    document.getElementById("kilogramsInput").value=x/2.2046;
+                }
+            }
+
+            function ConvertToPounds(x)
+            {
+                if(!x)
+                {
+                    document.getElementById("poundsInput").value=null;
+                }
+
+                if(x>0)
+                {
+                    document.getElementById("poundsInput").value=x*2.2046;
+                }
+            }
+        </script>
+
+    </body>
+</html>
